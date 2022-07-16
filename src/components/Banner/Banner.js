@@ -1,24 +1,17 @@
 import React from 'react'
 import {Container, makeStyles, Typography} from '@material-ui/core'
-import Carousel from './Carousel';
 
 
 const useStyles=makeStyles(()=>({
-    banner: {
+    top: {
         backgroundImage: "url(./blockchain11.png)",
         
         
     },
-    bannerContent: {
-        height: 200,
+
+    bottom: {
+        height: 300,
         display: "flex",
-        flexDirection: "column",
-        paddingTop: 25,
-        justifyContent: "space-around",
-    },
-    tagline: {
-        display: "flex",
-        height: "40%",
         flexDirection: "column",
         justifyContent: "center",
         textAlign: "center",
@@ -28,34 +21,34 @@ const useStyles=makeStyles(()=>({
 const Banner = () => {
     const classes=useStyles();
     return (
-        <div className={classes.banner}>
-        <Container className={classes.bannerContent}>
-        <div className={classes.tagline}>
+        <div className={classes.top}>
+      
+        <div className={classes.bottom}>
          <Typography 
          variant="h2"
          style={{
+            fontSize: "80px",
              fontWeight: "bold",
-             marginBottom: 15,
+             marginBottom: 10,
              fontFamily: "Monterrat",
              color: "#1A5276 ",
          }}>
-             Crypto Tracker
+             CRYPTO CAVE
 
          </Typography>
 
          <Typography
          variant="h6"
          style={{
-            fontWeight: "bold",
+            
              textTransform: "Capitalize",
-             fontFamily: "Monterrat",
+             fontFamily: "monospace",
              color: "#1A5276 ",
          }}>
-             Get all the Info regarding your favourite Crypto Coins.
+             Get all the information regarding Crypto Space in one place
          </Typography>
         </div>
-        
-        </Container>
+
         </div>
     )
 }

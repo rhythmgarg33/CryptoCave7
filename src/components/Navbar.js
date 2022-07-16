@@ -3,23 +3,17 @@ import {
   AppBar,
   Toolbar,
   CssBaseline,
-  Typography,
   makeStyles,
+  Typography,
 } from "@material-ui/core";
 import { useHistory } from 'react-router-dom'
-import { Link } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   first: {
-      float: "left",
       backgroundColor: "#1A5276 ",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
-      
-      
-      
-      
   },
 
   
@@ -27,8 +21,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
     color: "white",
-    fontSize: "20px",
-    marginLeft: theme.spacing(9.5),
+    fontSize: "25px",
     "&:hover": {
       color: "yellow",
       borderBottom: "1px solid white",
@@ -43,7 +36,8 @@ const useStyles = makeStyles((theme) => ({
   link1: {
     textDecoration: "none",
     color: "white",
-    fontSize: "20px",
+    fontSize: "25px",
+    marginRight: "25px",
     "&:hover": {
       color: "yellow",
       borderBottom: "1px solid white",
@@ -62,19 +56,27 @@ function Navbar() {
   return (
     
     <AppBar position="static" className={classes.first}>
-      <CssBaseline />
-      <Toolbar className="container">
-        
-          <div className={classes.navlinks}>
-            <Link to="/trend" className={classes.link1}>
+      <Toolbar>
+        <Typography
+        onClick={()=>history.push("/trend")}
+         
+            className={classes.link1}>
+              
               Trending Coins
-            </Link>
-            <Link to="/exchange" className={classes.link}>
-              Exchanges
-            </Link>
+              </Typography>
+
+              <Typography
+              onClick={()=>history.push("/exchange")}
+            className={classes.link}>
+              List of Exchanges
+              </Typography>
+
+             
+            
            
            
-          </div>
+          
+          
       </Toolbar>
     </AppBar>
   );

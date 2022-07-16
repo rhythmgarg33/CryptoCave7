@@ -2,8 +2,8 @@ import { AppBar, Container, Typography, Toolbar, Select, MenuItem, makeStyles, c
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { CryptoState } from '../CryptoContext'
-
-
+import AutoModal from '../Authentication/AutoModal'
+import UserSidebar from '../Authentication/UserSidebar'
 
 
 const useStyles=makeStyles(()=>({
@@ -11,7 +11,7 @@ const useStyles=makeStyles(()=>({
 
     flex: 1,
     color: "#1A5276 ",
-    fontFamily: "Montserrat",
+    fontFamily: "arial black",
     fontWeight: "bold",
     cursor: "pointer",
     }
@@ -21,19 +21,12 @@ const Header = () => {
     const classes=useStyles()
 const history = useHistory();
 
-const {currency, setCurrency,user } = CryptoState();
+const {currency, setCurrency,user} = CryptoState();
 
-const darkTheme = createTheme({
-    palette: {
-      primary: {
-          main: "#fff",
-      },
-      type: "dark",
-    },
-  });
+
 
    return(
-       <ThemeProvider theme={darkTheme}>
+       <>
        <AppBar color='transparent' position="static">
            <Container>
                <Toolbar>
@@ -47,7 +40,7 @@ const darkTheme = createTheme({
                    <Select
                    variant="outlined"
                    style={{
-                       width: 130,
+                       width: 100,
                        height: 50,
                        marginRight: 15,
                    }}
@@ -55,14 +48,16 @@ const darkTheme = createTheme({
                    onChange={(e)=> setCurrency(e.target.value)}
                    >
                        <MenuItem value={"USD"} >USD</MenuItem>
-                       <MenuItem value="INR" >INR</MenuItem>
+                       <MenuItem value={"INR"} >INR</MenuItem>
+                       <MenuItem value={"EUR"} >EUR</MenuItem>
+                      
                    </Select>
-                   
+                   {user? <UserSidebar/>:<AutoModal/>}
                </Toolbar>
            </Container>
 
        </AppBar>
-       </ThemeProvider>
+       </>
    )
 }
 

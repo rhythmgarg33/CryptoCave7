@@ -23,12 +23,11 @@ const CoinInfo = ({ coin }) => {
 
   const useStyles = makeStyles((theme) => ({
     container: {
-     width: "80%",
+     width: "90%",
      
-      //display: "flex",
-      //flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
+      
+     
+     
       marginTop: 25,
       padding: 40,
       [theme.breakpoints.down("md")]: {
@@ -57,9 +56,7 @@ const CoinInfo = ({ coin }) => {
 
   const darkTheme = createTheme({
     palette: {
-      primary: {
-        main: "#white",
-      },
+     
       type: "dark",
     },
   });
@@ -67,7 +64,7 @@ const CoinInfo = ({ coin }) => {
   return (
     <ThemeProvider theme={darkTheme}>
       <div className={classes.container}>
-        {!historicData | flag===false ? (
+        {!historicData ? (
           <CircularProgress
             style={{ color: "red" }}
             size={250}
@@ -89,15 +86,15 @@ const CoinInfo = ({ coin }) => {
                 datasets: [
                   {
                     data: historicData.map((coin) => coin[1]),
-                    label: `Price ( Past ${days} Days ) in ${currency}`,
-                    borderColor: "white",
+                    borderColor: "blue",
+                    borderWidth: 1,
                   },
                 ],
               }}
               options={{
                 elements: {
                   point: {
-                    radius: 1,
+                    radius: 0.25,
                   },
                 },
               }}
@@ -112,15 +109,26 @@ const CoinInfo = ({ coin }) => {
               }}
             >
               {chartDays.map((day) => (
-                <SelectButton
+                <button
+                onClick={() => {setDays(day.value)
+                }}
+                style={{  border: "3px solid brown",
+                borderRadius: 5,
+                padding: 10,
+                paddingLeft: 20,
+                paddingRight: 20,
+                fontFamily: "Montserrat",
+                cursor: "pointer",
+                fontSize: "auto",
+                width: "20%",
+                }}
+                
                   key={day.value}
-                  onClick={() => {setDays(day.value);
-                    setflag(false);
-                  }}
+                 
                   selected={day.value === days}
                 >
                   {day.label}
-                </SelectButton>
+                </button>
               ))}
             </div>
           </>

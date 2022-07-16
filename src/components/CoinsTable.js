@@ -44,7 +44,7 @@ export default function CoinsTable() {
     },
     pagination: {
       "& .MuiPaginationItem-root": {
-        color: "#808000",
+        color: "brown",
       },
      
     },
@@ -66,8 +66,6 @@ export default function CoinsTable() {
       type: "dark",
     },
   });
-
- 
 
   useEffect(() => {
     fetchCoins();
@@ -99,7 +97,7 @@ export default function CoinsTable() {
         />
         <TableContainer component={Paper}>
           {loading ? (
-            <LinearProgress style={{ backgroundColor: "gold" }} />
+            <LinearProgress style={{ backgroundColor: "red" }} />
           ) : (
             <Table aria-label="simple table">
               <TableHead style={{ backgroundColor: "#b35900",border: "5px solid brown", borderRadius: 8, height: 100 }}>
@@ -131,6 +129,7 @@ export default function CoinsTable() {
                         onClick={() => history.push(`/coins/${row.id}`)}
                         className={classes.row}
                         key={row.name}
+                        style={{backgroundColor:"black"}}
                         
                       >
                         <TableCell
@@ -196,7 +195,8 @@ export default function CoinsTable() {
 
         {/* Comes from @material-ui/lab */}
         <Pagination
-          count={(handleSearch()?.length / 10).toFixed(0)}
+          count={(handleSearch()?.length / 10)}
+          shape="rounded"
           style={{
             padding: 20,
             width: "100%",
@@ -204,7 +204,7 @@ export default function CoinsTable() {
             justifyContent: "center",
           }}
           classes={{ ul: classes.pagination }}
-          onChange={(_, value) => {
+          onChange={(id, value) => {
             setPage(value);
             window.scroll(0, 450);
           }}
