@@ -59,7 +59,7 @@ useEffect(() => {
   }, [user]);
 
     return (
-        <Crypto.Provider value={{currency, symbol,setCurrency,coins,loading,fetchCoins,alert,setAlert,user,watchlist}}>
+        <Crypto.Provider value={{currency, symbol,setCurrency,coins,loading,fetchCoins,user,watchlist}}>
             {children}
         </Crypto.Provider>
     )
