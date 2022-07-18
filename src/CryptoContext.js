@@ -14,12 +14,6 @@ const [coins, setCoins] = useState([]);
 const [loading, setLoading] = useState(false);
 const [user , setUser] = useState(null);
 const [watchlist, setwatchlist] = useState([])
-const [alert, setAlert] = useState({
-
-    open: false,
-    message: "",
-    type: "success",
-})
 
 
 useEffect(()=>{
