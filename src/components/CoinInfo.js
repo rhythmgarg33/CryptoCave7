@@ -122,8 +122,6 @@ const CoinInfo = ({ coin }) => {
                 }}
                 
                   key={day.value}
-                 
-                  selected={day.value === days}
                 >
                   {day.label}
                 </button>
