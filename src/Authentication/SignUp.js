@@ -10,19 +10,13 @@ const Signup = ({ handleClose }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = async () => {
-      return;
-    }
-
-    try {
-      const result = await createUserWithEmailAndPassword(
+        const result = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
       handleClose();
-    } catch (error) {
-      return;
-    }
+   
   };
 
   return (
