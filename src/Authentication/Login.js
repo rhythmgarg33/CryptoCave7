@@ -9,16 +9,8 @@ const Login = ({ handleClose }) => {
   const [password, setPassword] = useState("");
 
   const handleSubmit = async () => {
-    if (!email || !password) {
-      return;
-    }
-
-    try {
       const result = await signInWithEmailAndPassword(auth, email, password);
       handleClose();
-    } catch (error) {
-      return;
-    }
   };
 
   return (
