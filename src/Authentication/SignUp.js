@@ -7,7 +7,7 @@ import { auth } from "../firebase";
 const Signup = ({ handleClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  
 
   const handleSubmit = async () => {
         const result = await createUserWithEmailAndPassword(
@@ -47,14 +47,7 @@ const Signup = ({ handleClose }) => {
         onChange={(e) => setPassword(e.target.value)}
         fullWidth
       />
-      <TextField
-        variant="outlined"
-        label="Confirm Password"
-        type="password"
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-        fullWidth
-      />
+     
       <Button
         variant="contained"
         size="large"
