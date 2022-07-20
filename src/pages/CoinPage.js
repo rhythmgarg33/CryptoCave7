@@ -37,27 +37,22 @@ const CoinPage = () => {
 
   const addtowatchlist = async () => {
     const coinRef = doc(db, "watchlist", user.uid);
-    try {
+ 
       await setDoc(
         coinRef,
         { coins: watchlist ? [...watchlist, coin?.id] : [coin?.id] },
         { merge: true }
       );
-    } catch (error) {
-     
-    }
   };
 
   const removefromwatchlist = async () => {
     const coinRef = doc(db, "watchlist", user.uid);
-    try {
+   
       await setDoc(
         coinRef,
         { coins: watchlist.filter((wish) => wish !== coin?.id) },
         { merge: true }
       );
-    } catch (error) {
-    }
   };
   
 
