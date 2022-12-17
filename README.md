@@ -8,6 +8,7 @@ Web-Application to incorporate entire information in the crypto space. Users wil
 2. Description
 
 Number of coins displayed on the home page using pagination- 100
+
 Trending News and trending coins displayed - 10
 
 
