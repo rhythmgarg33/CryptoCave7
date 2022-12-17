@@ -15,6 +15,7 @@
 
 Api Keys to fetch Data about the coins
 
+
 export const CoinList = (currency) =>
   `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false`;
 
@@ -38,8 +39,8 @@ export const TrendingNews=()=>
 
 
 
-Output Displayed in the form of graphs
 
+Output Displayed in the form of graphs
 ![Screenshot 2022-12-17 11 39 21](https://user-images.githubusercontent.com/83527816/208228252-d23b11c2-b896-4cbc-ab2b-74d805662fc6.png)
 
 
