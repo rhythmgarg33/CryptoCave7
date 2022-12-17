@@ -6,6 +6,9 @@
 # 2. Description
 
 
+A web application to keep track of all the cryptocurrencies, view the timely charts, news and add your favourite coins to your watchlist. 
+Used HTML, CSS, Material UI, Java Script, React JS and Firebase.
+
 Number of coins displayed on the home page using pagination- 100
 
 Trending News and trending coins displayed - 10
