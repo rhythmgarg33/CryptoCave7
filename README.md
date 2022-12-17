@@ -6,9 +6,9 @@
 # 2. Description
 
 
-1. Number of coins displayed on the home page using pagination- 100
+Number of coins displayed on the home page using pagination- 100
 
-2. Trending News and trending coins displayed - 10
+Trending News and trending coins displayed - 10
 
 
 # 3. Input Output Data
