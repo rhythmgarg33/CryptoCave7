@@ -17,5 +17,11 @@ Trending News and trending coins displayed - 10
 https://cryptocave-8fd8e.web.app/
 
 5. Screenshot of the interface
-![Screenshot 2022-12-17 11 39 21](https://user-images.githubusercontent.com/83527816/208228178-64e4458c-4cc5-409f-a7fa-83d8ae254d52.png)
+![Screenshot 2022-12-17 11 38 15](https://user-images.githubusercontent.com/83527816/208228236-22b114f2-b3b8-45d4-a30f-4f5f5b1b8f37.png)
+![Screenshot 2022-12-17 11 38 21](https://user-images.githubusercontent.com/83527816/208228239-deedfeb5-df03-4eb1-bcca-5327627f37e9.png)
+![Screenshot 2022-12-17 11 38 43](https://user-images.githubusercontent.com/83527816/208228241-4bcfc125-28a5-49d9-a6b9-a2c9fe0e7dc4.png)
+![Screenshot 2022-12-17 11 39 05](https://user-images.githubusercontent.com/83527816/208228244-7a4e1ca1-be9d-4c7a-a049-1d34045533c0.png)
+![Screenshot 2022-12-17 11 39 21](https://user-images.githubusercontent.com/83527816/208228252-d23b11c2-b896-4cbc-ab2b-74d805662fc6.png)
+
+
 
